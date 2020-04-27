@@ -8,6 +8,7 @@
     La fonction utilise la séquence "gds.salle_seq" pour générer la valeur de la clé primaire de la salle à insérer dans la base. La date de création et la date de modification sont initialisées en utilisant la fonction "now()". 
     La fonction retourne la salle qui a été insérée.
 
+
 CREATE FUNCTION gds.pl_insert_salle(un_nom character varying(250), un_nb_personnes_max integer) RETURNS gds.salle AS $$
 DECLARE 
 	nouv_salle gds.salle%ROWTYPE;
