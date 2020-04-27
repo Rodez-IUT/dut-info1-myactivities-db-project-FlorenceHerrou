@@ -11,7 +11,7 @@
 CREATE FUNCTION gds.pl_insert_salle(un_nom character varying(250), un_nb_personnes_max integer) RETURNS gds.salle AS $$
 DECLARE 
 	nouv_salle gds.salle%ROWTYPE;
-	BEGIN
+BEGIN
 INSERT INTO gds.salle 
 	   VALUES(nextval('gds.salle_seq'), un_nom, un_nb_personnes_max, now(), now()) 
 	   RETURNING * INTO nouv_salle;
